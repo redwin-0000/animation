@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Test</title>
+</head>
+<body>
+    <div>
+        <h1></h1>
+        <h2></h2>
+    </div>
+
+    <script>
+     const currentTime =() =>{
+        const el  = document.querySelector("h1");
+
+        let date = new Date();
+        let hh = date.getHours();
+        let mm = date.getMinutes();
+        let sec = date.getSeconds();
+        
+        hh = hh < 10 ? `0${hh}` : hh;
+        mm = mm < 10 ? `0${mm}` : mm;
+        sec = sec < 10 ? `0${sec}` : sec;
+
+        let time = `${hh}:${mm}:${sec}`;
+        el.innerText = time;
+
+     };
+
+     currentTime();
+     setInterval(currentTime,1000);
+
+    //  const currentDate = () =>{
+    //     const el = document.querySelector("h2");
+        
+    //     let date = new Date();
+    //     let day = date.getDay();
+    //     let month = date.getMonth();
+    //     let year = date.getFullYear();
+      
+    //     let C_date = `${day}/${month}/${year}`;
+    //     el.innerText = C_date;
+
+
+    //  }
+
+    //  currentDate();
+    //  setInterval(currentDate);
+    </script>
+</body>
+</html>
